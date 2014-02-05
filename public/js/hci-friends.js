@@ -10,6 +10,18 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	$(".friend a h3").click(nameClick);
+}
+
+function nameClick(e) {
+	// Friend name clicked 
+
+	// prevent the page from reloading 
+  e.preventDefault();
+
+  var name = $(this).text();
+  var newText = anagrammedName(name);
+  $(this).text(newText);
 }
 
 function anagrammedName(name) {
